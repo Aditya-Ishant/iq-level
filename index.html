@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Test Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="header">
+                <h1>IQ Test Challenge</h1>
+                <p>Test your intelligence across Math, General Knowledge, and History</p>
+            </div>
+            
+            <div class="test-info">
+                <div class="info-card">
+                    <div class="icon">📊</div>
+                    <h3>15 Questions</h3>
+                    <p>5 questions each from Math, General Knowledge, and History</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">⏱️</div>
+                    <h3>No Time Limit</h3>
+                    <p>Take your time to think through each question</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">🎯</div>
+                    <h3>Get Your IQ Score</h3>
+                    <p>Receive a detailed analysis of your performance</p>
+                </div>
+            </div>
+            
+            <button id="start-btn" class="btn btn-primary">Start Test</button>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="screen">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="question-counter">1 of 15</span>
+                    <span id="subject-indicator">Math</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div id="subject-badge" class="subject-badge math">Math</div>
+                <h2 id="question-text">Question will appear here</h2>
+                
+                <div id="options-container" class="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+                
+                <div class="question-actions">
+                    <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                    <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <h1>Your IQ Test Results</h1>
+                <div id="iq-score-display" class="iq-score">
+                    <span id="iq-number">120</span>
+                    <span class="iq-label">IQ Score</span>
+                </div>
+                <p id="iq-interpretation">Above Average Intelligence</p>
+            </div>
+
+            <div class="results-breakdown">
+                <h3>Performance by Subject</h3>
+                <div class="subject-results">
+                    <div class="subject-result">
+                        <div class="subject-name">
+                            <span class="subject-icon math-icon">📊</span>
+                            Math
+                        </div>
+                        <div class="subject-score">
+                            <span id="math-score">0/5</span>
+                            <div class="score-bar">
+                                <div id="math-bar" class="score-fill math"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-result">
+                        <div class="subject-name">
+                            <span class="subject-icon gk-icon">🌍</span>
+                            General Knowledge
+                        </div>
+                        <div class="subject-score">
+                            <span id="gk-score">0/5</span>
+                            <div class="score-bar">
+                                <div id="gk-bar" class="score-fill gk"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="subject-result">
+                        <div class="subject-name">
+                            <span class="subject-icon history-icon">🏛️</span>
+                            History
+                        </div>
+                        <div class="subject-score">
+                            <span id="history-score">0/5</span>
+                            <div class="score-bar">
+                                <div id="history-bar" class="score-fill history"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button id="restart-btn" class="btn btn-primary">Take Test Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
